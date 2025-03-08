@@ -21,7 +21,7 @@ local function GetURL(scripturl)
 	if shared.VapeDeveloper then
 		return readfile("vape/"..scripturl)
 	else
-		return game:HttpGet("https://raw.githubusercontent.com/0W0Pumpkin/VapeV4ForRoblox/main/"..scripturl, true)
+		return game:HttpGet("https://raw.githubusercontent.com/Frostify1/VapeV4ForRoblox/main/"..scripturl, true)
 	end
 end
 
@@ -100,7 +100,7 @@ end
 local function getcustomassetfunc(path)
 	if not isfile(path) then
 		local req = request({
-			Url = "https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/"..path:gsub("vape/assets", "assets"),
+			Url = "https://raw.githubusercontent.com/Frostify1/VapeV4ForRoblox/main/"..path:gsub("vape/assets", "assets"),
 			Method = "GET"
 		})
 		writefile(path, req.Body)
